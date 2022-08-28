@@ -1,0 +1,73 @@
+.footer {
+  height: 100%;
+  background: #265e6c;
+  display: flex;
+  flex-direction: column;
+
+  @include sm {
+    height: 244px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 24px;
+    height: 155px;
+    width: 50%;
+    margin: auto;
+
+    @include sm {
+      flex-direction: row;
+    }
+  }
+
+  &__paragragh {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+  }
+
+  &__separator {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__btns {
+    width: 65%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    @include sm {
+      flex-direction: row;
+    }
+  }
+
+  &__btn {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+
+    &:hover {
+      color: #d2d2d2;
+    }
+
+    @include sm {
+      font-size: 14px;
+    }
+  }
+}

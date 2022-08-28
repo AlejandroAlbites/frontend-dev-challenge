@@ -1,0 +1,45 @@
+.notification {
+  position: fixed;
+  top: 70px;
+  right: 32px;
+  background-color: #e4e4e4;
+  color: #1f1f1f;
+  padding: 8px 16px;
+  z-index: 1;
+  margin: 0;
+
+  &__title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    color: #414141;
+    padding-bottom: 8px;
+  }
+
+  &__load {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #e4e4e4;
+    width: 100%;
+    height: 10px;
+  }
+
+  &__load:before {
+    content: '';
+    position: absolute;
+    background-color: green;
+    width: 0;
+    height: 10px;
+
+    animation: load 3s infinite;
+  }
+
+  @keyframes load {
+    100% {
+      width: 100%;
+    }
+  }
+}

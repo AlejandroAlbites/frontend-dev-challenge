@@ -1,0 +1,129 @@
+.home {
+  position: relative;
+  top: 48px;
+  display: grid;
+  grid-gap: 8px;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(8, auto);
+  grid-template-areas:
+    'home__rotation'
+    'home__title-cards'
+    'home__card-1'
+    'home__card-2'
+    'home__testimony'
+    'home__faq'
+    'home__form';
+
+  @include sm {
+    grid-template-columns: repeat(2, 1fr);
+    width: 75%;
+    margin: 0 auto;
+    grid-template-areas:
+      'home__rotation home__rotation'
+      'home__title-cards home__title-cards'
+      'home__card-1 home__card-1'
+      'home__card-2 home__card-2'
+      'home__testimony home__testimony'
+      'home__faq home__faq'
+      'home__form home__form';
+  }
+
+  @include md {
+    width: 75%;
+    margin: 0 auto;
+    top: 64px;
+    grid-template-areas:
+      'home__rotation home__rotation'
+      'home__title-cards home__title-cards'
+      'home__card-1 home__card-2'
+      'home__testimony home__testimony '
+      'home__faq home__form';
+  }
+}
+
+.home-header {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.home__rotation {
+  grid-area: home__rotation;
+}
+
+.home__title-cards {
+  grid-area: home__title-cards;
+}
+
+.home__card-1 {
+  grid-area: home__card-1;
+  height: 350px;
+
+  @include md {
+    height: 450px;
+  }
+}
+
+.home__card-2 {
+  grid-area: home__card-2;
+  height: 450px;
+  overflow: hidden;
+}
+
+.home__testimony {
+  grid-area: home__testimony;
+  height: 240px;
+}
+
+.home__form {
+  grid-area: home__form;
+  height: 440px;
+}
+
+.home__faq {
+  grid-area: home__faq;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 440px;
+  overflow: hidden;
+}
+
+.home-footer {
+  margin-top: 64px;
+  height: 400px;
+  background-color: red;
+
+  @include sm {
+    height: 244px;
+  }
+}
+
+.home__title {
+  text-align: center;
+  margin: 20px;
+  color: #486db7;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.home-menu {
+  position: absolute;
+  top: -1000px;
+  left: 13%;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  width: 75%;
+
+  @include md {
+    width: 75%;
+    margin: auto;
+  }
+}
+
+.home-menu.active {
+  height: 100%;
+  top: 64px;
+}

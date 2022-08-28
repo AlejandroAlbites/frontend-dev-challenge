@@ -1,0 +1,24 @@
+/* abstracts */
+@import './assets/styles/abstracts/mixins';
+@import './assets/styles/abstracts/variables';
+
+
+/* base */
+@import './assets/styles/base/base';
+@import './assets/styles/base/resets';
+
+/* pages */
+@import './assets/styles/pages/Home.scss';
+
+/* components */
+@import './assets/styles/components/Header.scss';
+@import './assets/styles/components/HeroRotation.scss';
+@import './assets/styles/components/CardContent.scss';
+@import './assets/styles/components/CardContentSecondary.scss';
+@import './assets/styles/components/Testimony.scss';
+@import './assets/styles/components/Faq.scss';
+@import './assets/styles/components/Form.scss';
+@import './assets/styles/components/Footer.scss';
+@import './assets/styles/components/Menu.scss';
+@import './assets/styles/components/Modal.scss';
+@import './assets/styles/components/Notification.scss';

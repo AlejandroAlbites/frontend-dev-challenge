@@ -1,0 +1,43 @@
+.faq {
+  width: 90%;
+  margin: auto 8px;
+
+  &__container {
+    overflow: hidden;
+    margin-bottom: 8px;
+  }
+
+  &__question {
+    cursor: pointer;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 32px;
+    letter-spacing: -0.02em;
+    color: #414141;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px dashed #414141;
+
+    &:hover {
+      color: $blue;
+    }
+  }
+
+  &__answer {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: -0.02em;
+    color: #414141;
+    transition: all 0.5s ease;
+  }
+
+  .faq__container.active .faq__answer {
+    height: 60px;
+  }
+}

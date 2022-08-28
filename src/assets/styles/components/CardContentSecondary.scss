@@ -1,0 +1,90 @@
+.card-secondary {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-gap: 8px;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+
+  &__container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+  }
+  &__body {
+    margin-right: 8px;
+    margin-left: 8px;
+
+    @include sm {
+      margin-right: 0px;
+    }
+  }
+
+  &__img-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  &__img {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    margin: 0 8px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.15);
+    }
+
+    @include sm {
+      margin: 0;
+    }
+  }
+  &__title {
+    cursor: pointer;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: -0.02em;
+    color: $black;
+
+    &:hover {
+      color: $blue;
+    }
+
+    @include sm {
+      font-size: 22px;
+    }
+  }
+
+  &__text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    color: $black;
+
+    @include sm {
+      font-size: 14px;
+    }
+  }
+  &__category {
+    cursor: pointer;
+    color: $blue;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $blueHover;
+    }
+  }
+}

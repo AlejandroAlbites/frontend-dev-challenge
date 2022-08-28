@@ -1,0 +1,87 @@
+.card-principal {
+  height: 100%;
+  margin: 0 8px;
+
+  @include sm {
+    margin: 0;
+  }
+
+  &__img {
+    cursor: pointer;
+    width: 100%;
+    height: 220px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+
+    @include md {
+      height: 320px;
+    }
+
+    &:hover {
+      transform: scale(1.15);
+    }
+  }
+
+  &__category {
+    cursor: pointer;
+    color: $blue;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-top: 8px;
+
+    &:hover {
+      color: $blueHover;
+    }
+  }
+
+  &__title {
+    cursor: pointer;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: -0.02em;
+    color: $black;
+
+    &:hover {
+      color: $blue;
+    }
+
+    @include sm {
+      font-size: 22px;
+    }
+
+    @include md {
+      font-size: 24px;
+    }
+  }
+
+  &__text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    color: $black;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    @include sm {
+      font-size: 14px;
+    }
+  }
+}
+
+.card-principal__img-container {
+  overflow: hidden;
+  border-radius: 8px;
+  height: 220px;
+
+  @include md {
+    height: 320px;
+  }
+}

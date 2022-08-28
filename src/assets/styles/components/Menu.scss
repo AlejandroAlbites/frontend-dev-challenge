@@ -1,0 +1,111 @@
+.menu {
+  background-color: white;
+  &__search {
+    position: relative;
+  }
+
+  &__input {
+    box-sizing: border-box;
+    border: 1px solid #cacaca;
+    border-radius: 4px;
+    width: 343px;
+    height: 56px;
+    padding-left: 16px;
+    width: 100%;
+    margin-top: 32px;
+
+    &::placeholder {
+      font-family: 'Source Sans Pro', sans-serif;
+      padding-left: 8px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: -0.02em;
+      color: #b1b1b1;
+    }
+  }
+
+  &__btn {
+    cursor: pointer;
+    position: absolute;
+    top: 32px;
+    right: 8px;
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+    padding: 8px 16px;
+    height: 40px;
+    background: #696969;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+    transition: all 0.3s ease;
+
+    img {
+      margin-right: 8px;
+    }
+
+    &:hover {
+      background-color: $blue;
+    }
+  }
+
+  &__categories {
+    display: grid;
+    grid-gap: 8px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, auto);
+    margin-top: 32px;
+
+    @include sm {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__category {
+    height: 160px;
+
+    @include md {
+      height: 150px;
+    }
+  }
+
+  &__title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0.02em;
+    color: $blue;
+  }
+
+  &__line {
+    display: block;
+    background: #e4e4e4;
+    width: 95%;
+    height: 2px;
+    margin-bottom: 8px;
+  }
+
+  &__topics {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    color: #555555;
+    cursor: pointer;
+
+    &:hover {
+      color: $blue;
+    }
+
+    @include md {
+      float: left;
+      width: 45%;
+    }
+  }
+}
