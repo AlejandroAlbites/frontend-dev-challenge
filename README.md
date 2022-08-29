@@ -1,12 +1,13 @@
+# SOLUCION
+
+Codigo desplegado en netlify: https://630d32cf9d4b8e31cea8a740--beamish-sunshine-0682e9.netlify.app/
+Solución Figma: https://www.figma.com/file/p8GfdYRu8jmOCtigmOb8jQ/WeRemote-Test?node-id=0%3A1
+
 ## Descripción
 
 Proyecto **Frontend DEV Challenge** para aplicar al puesto de diseñador y maquetador web (Frontend).
 
 ## Figma
-
-Como parte del Challenge, se envía link del Figma realizado con base en los requerimientos solicitados:
-
-https://www.figma.com/file/p8GfdYRu8jmOCtigmOb8jQ/WeRemote-Test?node-id=0%3A1
 
 En Figma se cuenta con las funcionalidades de:
 
@@ -16,6 +17,8 @@ En Figma se cuenta con las funcionalidades de:
 - Caja de testimonios slider
 - Contenido
 - Formulario
+
+Se comparte link de la simulación: https://www.figma.com/proto/p8GfdYRu8jmOCtigmOb8jQ/WeRemote-Test?node-id=29%3A22&scaling=scale-down&page-id=0%3A1&starting-point-node-id=29%3A22&show-proto-sidebar=1&hide-ui=1
 
 ## Requerimiento
 
