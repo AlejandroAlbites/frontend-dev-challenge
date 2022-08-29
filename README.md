@@ -46,7 +46,7 @@ El proyecto cuenta con una sola vista llamada Home, donde se muestran todos los 
 7. Se trabajó aplicando el concepto First Mobile, para ello se configuró un mixin con los media queries y los break points
    para facilitar el responsive.
 
-# Glosario de carpetas
+### Glosario de carpetas
 
 1. Carpeta Components, carpeta donde se encuentran los componentes utilizados en la vista Home.
 2. Carpeta Page, carpeta donde se ubican todas las vistas de la aplicación.
