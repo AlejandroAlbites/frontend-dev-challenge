@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { dataTestimony } from '../mocks/dataMock';
+import React, { useEffect, useRef, useState } from "react";
+import { dataTestimony } from "../mocks/dataMock";
 
 export const Testimony = () => {
   const [offSetLeftValue, setOffSetLeftValue] = useState<number>(0);
@@ -25,15 +25,15 @@ export const Testimony = () => {
   };
 
   useEffect(() => {
-    document.addEventListener('mouseup', handleMouseUp);
+    document.addEventListener("mouseup", handleMouseUp);
     return () => {
-      document.removeEventListener('mouseup', handleMouseUp);
+      document.removeEventListener("mouseup", handleMouseUp);
     };
   }, []);
   useEffect(() => {
-    document.addEventListener('mousemove', handleMouseMove);
+    document.addEventListener("mousemove", handleMouseMove);
     return () => {
-      document.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener("mousemove", handleMouseMove);
     };
   }, [dragging]);
 
@@ -56,7 +56,8 @@ export const Testimony = () => {
       onMouseUp={(e) => handleMouseUp(e)}
       onMouseDown={(e) => handleMouseDown(e)}
       onMouseMove={(e) => handleMouseMove(e)}
-      ref={divContainer}>
+      ref={divContainer}
+    >
       <div className="testimony__cards" ref={divCards}>
         {dataTestimony &&
           dataTestimony.map((item) => (
@@ -68,7 +69,7 @@ export const Testimony = () => {
                 loading="lazy"
               />
               <div className="testimony__card-content">
-                <h2 className="testimony__name">{item.name}</h2>
+                <h2 className="testimony__name">~ {item.name} ~</h2>
                 <p className="testimony__text">{item.testimony}</p>
               </div>
             </div>

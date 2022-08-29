@@ -1,42 +1,56 @@
-<p align="center">
-  <a href='https://weremote.net'>
-    <img src="https://weremote.net/wp-content/uploads/2021/04/Logo-WR.svg" width="300" />
-  </a>
-</p>
-<br />
-
 ## Descripción
-**Frontend DEV Challenge** es una prueba de admisión para desarrolladores en HTML, CSS, JavaScript.
 
-## Pasos
-1. Crear un **fork** y entregar el enlace del repositorio de tu usuario. Evaluaremos la prueba en tu repositorio personal.
-2. Utilizar el diseño que debe finalizar y que está disponible en Figma (solo una pantalla): https://www.figma.com/file/FxX6dCznISsNkztnRa59Rf/Figma-Test?node-id=0%3A1
-3. Montar el código en HTML5, CSS3 y JS con efectos y animaciones.
-4. Usar buenas prácticas de HTML para SEO.
+Proyecto **Frontend DEV Challenge** para aplicar al puesto de diseñador y maquetador web (Frontend).
 
-## Buenas prácticas y sugerencias
-1. Mobile first.
-2. Layout responsive y cross-browser.
-3. Código legible y bien estructurado.
-4. HTML optimizado para SEO.
-5. Idioma del código y comentarios en inglés.
-6. Se puede utilizar una UI lib **solo para el GRID**, el resto debe ser desarrollado (colores, textos, botones, forms, paddings, margins, etc).
-7. **CSS**  
-a. Usar animaciones simples de hover, animaciones de mensaje del formulario o de búsqueda, etc. 
-b. Usar **nomenclatura BEM** para estilos.   
-c. Utilizar los estilos de color y textos **creados en Figma**.   
-d. Utilizar 8px GRID para espacios, paddings, margins.  
-e. Si se considera necesario, se pueden utilizar variables.  
-8. **JavaScript**  
-a. **No utilizar jQuery**, solamente JS puro ES6.  
-b. Utilizar la nomenclatura **camelCase**.  
-c. Como sugerencia: recomendamos crear una función de *alert* para enviar el formulario (puede ser envío falso, solo una alerta), un Listener de scroll para mostrar/ocultar algún botón o el banner fijo/flotante, click del FAQ/Accordion, abrir y cerrar un modal.
+## Figma
 
-## Plus
-1. Componer el proyecto en **ReactJS** (no olvidar añadir el readme al proyecto final).
-2. SCSS/SASS
+Como parte del Challenge, se envía link del Figma realizado con base en los requerimientos solicitados:
 
-## Fecha límite
-1. Siete días (7 días) a partir del correo electrónico de envío del Desafío Tech. La fecha exacta está en el correo electrónico.
-2. Notificar en el correo electrónico la finalización y enviar solamente la url del repositorio para evaluación.
-3. Utilizar siempre en el correo electrónico la opción "Responder a todos".
+https://www.figma.com/file/p8GfdYRu8jmOCtigmOb8jQ/WeRemote-Test?node-id=0%3A1
+
+En Figma se cuenta con las funcionalidades de:
+
+- Menú desplegable
+- Hero Rotatorio
+- FAQ tipo acordeón
+- Caja de testimonios slider
+- Contenido
+- Formulario
+
+## Requerimiento
+
+La aplicación fue realizada con node v16.14.0 y React 18.
+
+1. Clonar el repositorio
+
+2. Ejecutar el comando npm i para instalar los node_modules
+
+3. Ejecutar el comando npm start
+
+4. Ejecutar Control + C para detener el proceso
+
+## Acerca del proyecto
+
+El proyecto fue realizado con React + typescript para el renderizado de componentes y Sass como procesador CSS.
+
+El proyecto cuenta con una sola vista llamada Home, donde se muestran todos los requerimientos solicitados.
+
+1. Cuenta con un menú (hamburguesa) desplegable, donde se incluyo un input search.
+2. Hero rotatorio de imágenes, se puede hacer manualmente o automático cada 5 segundos.
+3. Contenido, cuenta con dos secciones de contenido, una principal y otra secundaria( donde se pueden mostrar 2
+   contenidos en menor tamaño).
+4. Testimonios con funcionalidad slider, animado con un drag(arrastrar) para interactuar con la vista.
+5. FAQ de preguntas tipo acordeón.
+6. Formulario de consultas, los campos cuentan con validación para no enviar un formulario vacío, al enviar el formulario
+   se agregó un MODAL con el fin de mostrar esa funcionalidad, cuando se confirma el envío, se añadió una notificación animada de 3 segundos.
+7. Se trabajó aplicando el concepto First Mobile, para ello se configuró un mixin con los media queries y los break points
+   para facilitar el responsive.
+
+# Glosario de carpetas
+
+1. Carpeta Components, carpeta donde se encuentran los componentes utilizados en la vista Home.
+2. Carpeta Page, carpeta donde se ubican todas las vistas de la aplicación.
+3. Carpeta assets/styles, carpeta donde se administran los archivos SASS.
+4. Carpeta "mocks", en esta carpeta se encuentran todos los datos usados en el renderizado, se realizó de
+   esta manera para facilitar el cambio cuando se requieran renderizar datos de una base de datos.
+5. Carpeta Interface, carpeta donde se encuentran las interfaces, necesario para el tipado de variables en typescript.

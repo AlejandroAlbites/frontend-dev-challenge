@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { dataCarousel } from '../mocks/dataMock';
+import React, { useEffect, useState } from "react";
+import { dataCarousel } from "../mocks/dataMock";
 
 export const HeroRotation = () => {
   const [slideIndex, setSlideIndex] = useState<number>(1);
@@ -19,7 +19,7 @@ export const HeroRotation = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
-    }, 9000);
+    }, 5000);
     return () => clearInterval(interval);
   });
   return (
@@ -30,13 +30,14 @@ export const HeroRotation = () => {
             key={obj.id}
             className={
               slideIndex === index + 1
-                ? 'slider__slide slider__slide--active-anim'
-                : 'slider__slide'
-            }>
+                ? "slider__slide slider__slide--active-anim"
+                : "slider__slide"
+            }
+          >
             <img src={obj.image} alt={obj.title} loading="lazy" />
             <div className="text">
               <h1 className="text__title">
-                Su viaje de{' '}
+                Su viaje de{" "}
                 <span className="text__key-word">salud emocional</span>
                 <br />
                 empieza aquí
@@ -61,9 +62,10 @@ export const HeroRotation = () => {
             onClick={() => moveDot(index + 1)}
             className={
               slideIndex === index + 1
-                ? 'dots__dot dots__dot--active'
-                : 'dots__dot'
-            }></div>
+                ? "dots__dot dots__dot--active"
+                : "dots__dot"
+            }
+          ></div>
         ))}
       </div>
     </section>
