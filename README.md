@@ -1,6 +1,6 @@
-# SOLUCION
+# SOLUCIÓN
 
-Codigo desplegado en netlify: https://630d32cf9d4b8e31cea8a740--beamish-sunshine-0682e9.netlify.app/
+Código desplegado en netlify: https://630d32cf9d4b8e31cea8a740--beamish-sunshine-0682e9.netlify.app/
 Solución Figma: https://www.figma.com/file/p8GfdYRu8jmOCtigmOb8jQ/WeRemote-Test?node-id=0%3A1
 
 ## Descripción
