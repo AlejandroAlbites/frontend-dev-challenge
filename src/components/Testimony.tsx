@@ -3,6 +3,7 @@ import { dataTestimony } from "../mocks/dataMock";
 
 export const Testimony = () => {
   const [offSetLeftValue, setOffSetLeftValue] = useState<number>(0);
+  const [offSetClick, setOffSetClick] = useState<number>(-450);
   const [dragging, setDragging] = useState<boolean>(false);
   const divCards: any = useRef<HTMLHeadingElement>(null);
   const divContainer: any = useRef<HTMLHeadingElement>(null);
@@ -20,10 +21,26 @@ export const Testimony = () => {
   const handleMouseMove: any = (e: React.MouseEvent) => {
     if (dragging && divCards.current && offSetLeftValue) {
       divCards.current.style.left = `${e.clientX - offSetLeftValue}px`;
+      divCards.current.style.transition = `all 0s`;
     }
     limitCards();
   };
+  const handleClickLeft = () => {
+    setOffSetClick(offSetClick + 350);
+    divCards.current.style.left = `${offSetClick}px`;
+    divCards.current.style.transition = `all 1s ease-in-out`;
+  };
 
+  const handleClickRigth = () => {
+    setOffSetClick(offSetClick - 350);
+    divCards.current.style.left = `${offSetClick}px`;
+    divCards.current.style.transition = `all 1s ease-in-out`;
+  };
+  useEffect(() => {
+    if (offSetClick < -1400 || offSetClick > 0) {
+      setOffSetClick(0);
+    }
+  }, [offSetClick]);
   useEffect(() => {
     document.addEventListener("mouseup", handleMouseUp);
     return () => {
@@ -51,30 +68,40 @@ export const Testimony = () => {
   };
 
   return (
-    <div
-      className="testimony"
-      onMouseUp={(e) => handleMouseUp(e)}
-      onMouseDown={(e) => handleMouseDown(e)}
-      onMouseMove={(e) => handleMouseMove(e)}
-      ref={divContainer}
-    >
-      <div className="testimony__cards" ref={divCards}>
-        {dataTestimony &&
-          dataTestimony.map((item) => (
-            <div className="testimony__card" key={item.id}>
-              <img
-                className="testimony__img"
-                src={item.img}
-                alt={item.name}
-                loading="lazy"
-              />
-              <div className="testimony__card-content">
-                <h2 className="testimony__name">~ {item.name} ~</h2>
-                <p className="testimony__text">{item.testimony}</p>
+    <>
+      <button className="btn-rigth" onClick={handleClickRigth}>
+        {" "}
+        {">"}
+      </button>
+      <button className="btn-left" onClick={handleClickLeft}>
+        {" "}
+        {"<"}
+      </button>
+      <section
+        className="testimony"
+        onMouseUp={(e) => handleMouseUp(e)}
+        onMouseDown={(e) => handleMouseDown(e)}
+        onMouseMove={(e) => handleMouseMove(e)}
+        ref={divContainer}
+      >
+        <div className="testimony__cards" ref={divCards}>
+          {dataTestimony &&
+            dataTestimony.map((item) => (
+              <div className="testimony__card" key={item.id}>
+                <img
+                  className="testimony__img"
+                  src={item.img}
+                  alt={item.name}
+                  loading="lazy"
+                />
+                <div className="testimony__card-content">
+                  <h2 className="testimony__name">~ {item.name} ~</h2>
+                  <p className="testimony__text">{item.testimony}</p>
+                </div>
               </div>
-            </div>
-          ))}
-      </div>
-    </div>
+            ))}
+        </div>
+      </section>
+    </>
   );
 };

@@ -6,26 +6,26 @@
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(8, auto);
   grid-template-areas:
-    'home__rotation'
-    'home__title-cards'
-    'home__card-1'
-    'home__card-2'
-    'home__testimony'
-    'home__faq'
-    'home__form';
+    "home__rotation"
+    "home__title-cards"
+    "home__card-1"
+    "home__card-2"
+    "home__testimony"
+    "home__faq"
+    "home__form";
 
   @include sm {
     grid-template-columns: repeat(2, 1fr);
     width: 75%;
     margin: 0 auto;
     grid-template-areas:
-      'home__rotation home__rotation'
-      'home__title-cards home__title-cards'
-      'home__card-1 home__card-1'
-      'home__card-2 home__card-2'
-      'home__testimony home__testimony'
-      'home__faq home__faq'
-      'home__form home__form';
+      "home__rotation home__rotation"
+      "home__title-cards home__title-cards"
+      "home__card-1 home__card-1"
+      "home__card-2 home__card-2"
+      "home__testimony home__testimony"
+      "home__faq home__faq"
+      "home__form home__form";
   }
 
   @include md {
@@ -33,11 +33,11 @@
     margin: 0 auto;
     top: 64px;
     grid-template-areas:
-      'home__rotation home__rotation'
-      'home__title-cards home__title-cards'
-      'home__card-1 home__card-2'
-      'home__testimony home__testimony '
-      'home__faq home__form';
+      "home__rotation home__rotation"
+      "home__title-cards home__title-cards"
+      "home__card-1 home__card-2"
+      "home__testimony home__testimony "
+      "home__faq home__form";
   }
 }
 
@@ -73,6 +73,7 @@
 .home__testimony {
   grid-area: home__testimony;
   height: 240px;
+  position: relative;
 }
 
 .home__form {
